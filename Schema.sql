@@ -34,6 +34,8 @@
 -- FROM '/Users/erichernandez/Desktop/products/related.csv'
 -- CSV HEADER;
 
+-- CREATE INDEX related_products_asc ON related_products(related_product_id ASC);
+
 -- CREATE TABLE styles (
 --   style_id SERIAL PRIMARY KEY,
 --   product_id INTEGER,
@@ -60,12 +62,17 @@
 -- FROM '/Users/erichernandez/Desktop/products/skus.csv'
 -- CSV HEADER;
 
+--CREATE INDEX skus_style_id_asc ON skus(style_id ASC);
+--CREATE INDEX skus_size_asc ON skus(size ASC);
+
 -- CREATE TABLE photos (
 --   id SERIAL PRIMARY KEY,
 --   style_id INTEGER,
 --   url TEXT,
 --   thumbnail_url TEXT
 -- );
+
+--CREATE INDEX photos_style_id_asc ON photos(style_id ASC);
 
 -- COPY photos
 -- FROM '/Users/erichernandez/Desktop/products/photos.csv'
