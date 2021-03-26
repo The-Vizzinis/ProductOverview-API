@@ -24,6 +24,8 @@
 -- FROM '/users/erichernandez/desktop/products/features.csv'
 -- CSV;
 
+-- CREATE INDEX features_product_id_asc ON features(product_id);
+
 -- CREATE TABLE related_products (
 --   id SERIAL PRIMARY KEY,
 --   current_product_id INTEGER,
@@ -35,6 +37,7 @@
 -- CSV HEADER;
 
 -- CREATE INDEX related_products_asc ON related_products(related_product_id ASC);
+-- CREATE INDEX related_products_c_product_id ON related_products(current_product_id);
 
 -- CREATE TABLE styles (
 --   style_id SERIAL PRIMARY KEY,
@@ -49,7 +52,7 @@
 -- FROM '/Users/erichernandez/Desktop/products/styles.csv'
 -- CSV HEADER;
 
--- CREATE INDEX style_name_asc ON styles(style_name ASC);
+-- CREATE INDEX styles_product_id_asc ON styles(product_id);
 
 -- CREATE TABLE skus (
 --   id SERIAL PRIMARY KEY,

@@ -20,7 +20,7 @@ app.get('/products', (req, res) => {
 
   db.query('SELECT * FROM products LIMIT 10')
   .then((data) => {
-    res.status.send(data.rows);
+    res.status(200).send(data.rows);
   }).catch((err) => {
     console.log('error getting all products', err);
   })
